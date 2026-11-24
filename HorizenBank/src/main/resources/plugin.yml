@@ -1,0 +1,21 @@
+name: HorizenBank
+version: 1.0.0
+main: com.horizenbank.HorizenBank
+api-version: '26.3'
+depend: [Vault]
+authors: [Horizen SMP]
+description: GUI banking, daily interest, private item vaults and admin-approved loans.
+commands:
+  bank:
+    description: Open and manage your Horizen Bank account.
+    usage: /bank [create|deposit|withdraw|transfer|vault|loan|repay|history|upgrade]
+    aliases: [hbank]
+  bankadmin:
+    description: Horizen Bank administration.
+    usage: /bankadmin <pending|approve|deny|setbalance|reload>
+    permission: horizenbank.admin
+permissions:
+  horizenbank.use:
+    default: true
+  horizenbank.admin:
+    default: op

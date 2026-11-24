@@ -1,0 +1,47 @@
+# Horizen Bank - all monetary values use your existing Vault economy.
+settings:
+  currency-symbol: "रू"
+  compact-numbers: true
+  starting-balance: 0.0
+  account-creation-cost: 0.0
+  max-accounts-per-player: 3
+  account-upgrade-cost: 250000.0
+  account-upgrade-increase: 1
+  max-account-balance: -1
+  min-transaction: 1.0
+  max-transaction: -1
+  transaction-history-limit: 100
+  vault-size: 54
+
+interest:
+  enabled: true
+  daily-rate: 0.005
+  minimum-balance: 1000.0
+  maximum-daily-payout: 50000.0
+  compound: true
+
+loans:
+  enabled: true
+  maximum-amount: 1000000.0
+  daily-interest-rate: 0.02
+  maximum-active-loans: 1
+  minimum-account-age-days: 0
+  allow-player-repayment: true
+
+gui:
+  title: "&8[ &6&lHorizen Bank &8]"
+  rows: 3
+  filler: "GRAY_STAINED_GLASS_PANE"
+  accent: "GOLD_INGOT"
+  vault-title: "&8[ &6&lPrivate Vault &8]"
+  history-title: "&8[ &6&lTransaction History &8]"
+  loan-title: "&8[ &6&lLoan Center &8]"
+
+messages:
+  prefix: "&8[&6Horizen Bank&8] &r"
+  no-permission: "&cYou do not have permission."
+  player-only: "&cThis command can only be used in-game."
+  no-account: "&cYou do not have a bank account. Use &e/bank create <name>&c."
+  insufficient-wallet: "&cYou do not have enough money in your wallet."
+  insufficient-bank: "&cYour bank account does not have enough money."
+  success: "&aTransaction completed successfully."
