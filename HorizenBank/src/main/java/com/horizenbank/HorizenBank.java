@@ -349,7 +349,7 @@ public final class HorizenBank extends JavaPlugin implements Listener, CommandEx
                         inv.setItem(slot++,item(Material.PAPER,"&e"+r.getString(1),
                                 "&7Amount: &f"+money(r.getDouble(2)),
                                 "&7"+Objects.toString(r.getString(3),""),
-                                "&8"+new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date(r.getLong(4)))));
+                                "&8"+new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm").format(new java.util.Date(r.getLong(4)))));
                     }
                 }
             }
@@ -437,7 +437,7 @@ public final class HorizenBank extends JavaPlugin implements Listener, CommandEx
             inv.setItem(13, item(Material.GOLD_INGOT, "&6" + a.name,
                     "&7Account ID: &f" + a.id,
                     "&7Balance: &a" + money(a.balance),
-                    "&7Created: &f" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(new Date(a.created))));
+                    "&7Created: &f" + new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date(a.created))));
             inv.setItem(15, item(Material.WRITABLE_BOOK, "&bRecent transactions", "&7Click to view account history"));
             inv.setItem(22, item(Material.ARROW, "&eBack to player accounts"));
             admin.openInventory(inv);
@@ -459,7 +459,7 @@ public final class HorizenBank extends JavaPlugin implements Listener, CommandEx
                         inv.setItem(slot++, item(Material.PAPER, "&e" + r.getString(1),
                                 "&7Amount: &f" + money(r.getDouble(2)),
                                 "&7Note: &f" + Objects.toString(r.getString(3), ""),
-                                "&8" + new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date(r.getLong(4)))));
+                                "&8" + new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm").format(new java.util.Date(r.getLong(4)))));
                     }
                 }
             }
